@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <title>Dicom Objects on this medium</title>
+    <script type="text/javascript">
+
+          /* Entscheidet ob die Tabelle ein oder ausgeklappt
+          * werden muss und fuehrt die entsprechende Aktion anschliessend aus
+          */
+          function table_swap(TableName, NavName)
+          {
+          var table = document.getElementById(TableName);
+          var image = document.getElementById(NavName);
+
+          if ('block' == table.style.display)
+          {
+          table.style.display = 'none';
+          image.src = 'images/arrow.gif';
+          }
+          else
+          {
+          table.style.display = 'block';
+          image.src = 'images/arrowdwn.gif';
+          }
+          }
+        </script>
+  </head>
+  <body>
+    <h1>Dicom Objects on this medium</h1>
+    <br clear="all" />
+    <h2>
+      <img id="Nav_1_1" src="images/arrow.gif" onclick="table_swap('Table_1_1','Nav_1_1')" alt="navigation arrow" />
+               
+              1. Patient:  Anonym, 85590</h2>
+    <div id="Table_1_1" style="display: block">
+      <table border="1" width="100%">
+        <tr bgcolor="#9acd32">
+          <th align="left">Patient name</th>
+          <th align="left">Patient ID</th>
+          <th align="left">Patient Birthdate</th>
+          <th align="left">Patient Sex</th>
+          <th align="left">Patient NumberOfStudies</th>
+        </tr>
+        <tr>
+          <td>Anonym, 85590</td>
+          <td>85590 </td>
+          <td>1942-04-04</td>
+          <td>M </td>
+          <td>1</td>
+        </tr>
+      </table>
+      <table width="100%">
+        <tr>
+          <td width="5%"> </td>
+          <td>
+            <h3>
+              <img id="Nav_2_1" src="images/arrow.gif" onclick="table_swap('Table_2_1','Nav_2_1')" alt="navigation arrow" />
+                       
+                      Study: (ID: OCT M/P )
+                    </h3>
+          </td>
+        </tr>
+      </table>
+      <div id="Table_2_1" style="display: none">
+        <table border="1" style="display:block" width="95%" align="right">
+          <tr bgcolor="#B0B0FF">
+            <th align="left">Study ID</th>
+            <th align="left">Accession Number</th>
+            <th align="left">Study Date</th>
+            <th align="left">Study Time</th>
+            <th align="left">Study Description</th>
+            <th align="left">Number Of Series</th>
+          </tr>
+          <tr>
+            <td>OCT M/P </td>
+            <td>116916</td>
+            <td>2022-02-03</td>
+            <td>13:25:08</td>
+            <td>OCT Macula Papille</td>
+            <td>8</td>
+          </tr>
+        </table>
+        <br clear="all" />
+        <table width="100%">
+          <tr>
+            <td width="10%"> </td>
+            <td>
+              <h3>
+                <img id="Nav_3_1" src="images/arrow.gif" onclick="table_swap('Table_3_1','Nav_3_1')" alt="navigation arrow" />
+                           
+                          Series: (Nr: 1 )
+                        </h3>
+            </td>
+          </tr>
+        </table>
+        <div id="Table_3_1" style="display: none">
+          <table border="1" style="display:block" width="90%" align="right">
+            <tr bgcolor="#C0C0C0">
+              <th align="left">Modality</th>
+              <th align="left">Series Date</th>
+              <th align="left">Series Time</th>
+              <th align="left">Series Description</th>
+              <th align="left">Series Number</th>
+              <th align="left">Number Of Images</th>
+            </tr>
+            <tr>
+              <td>OP</td>
+              <td>2022-02-03</td>
+              <td>13:25:08</td>
+              <td>Section IR 30° ART</td>
+              <td>1 </td>
+              <td>1</td>
+            </tr>
+          </table>
+          <br clear="all" />
+          <table width="100%">
+            <tr>
+              <td width="15%"> </td>
+              <td>
+                <h3>
+                  <img id="Nav_4_1" src="images/arrow.gif" onclick="table_swap('Table_4_1','Nav_4_1')" alt="navigation arrow" />
+                             
+                            Images: (#: 1)
+                        </h3>
+              </td>
+            </tr>
+          </table>
+          <div id="Table_4_1" style="display: none">
+            <table border="1" style="display:block" width="85%" align="right">
+              <tr bgcolor="#FF8040">
+                <th align="left">Instance Number</th>
+                <th align="left">Image Type</th>
+                <th align="left">Referenced SOP Class UID in File</th>
+                <th align="left">Referenced Transfer Syntax UID In File</th>
+                <th align="left">Referenced File ID</th>
+              </tr>
+              <tr>
+                <td>1 </td>
+                <td>ORIGINAL\PRIMARY\\RED </td>
+                <td>1.2.840.10008.5.1.4.1.1.77.1.5.1</td>
+                <td>1.2.840.10008.1.2.1</td>
+                <td>
+                  <a href="../dicom/mc86/85590/546973/9320717/00000004">dicom/mc86/85590/546973/9320717/00000004</a>
+                </td>
+              </tr>
+            </table>
+            <br clear="all" />
+          </div>
+        </div>
+        <table width="100%">
+          <tr>
+            <td width="10%"> </td>
+            <td>
+              <h3>
+                <img id="Nav_3_2" src="images/arrow.gif" onclick="table_swap('Table_3_2','Nav_3_2')" alt="navigation arrow" />
+                           
+                          Series: (Nr: 1 )
+                        </h3>
+            </td>
+          </tr>
+        </table>
+        <div id="Table_3_2" style="display: none">
+          <table border="1" style="display:block" width="90%" align="right">
+            <tr bgcolor="#C0C0C0">
+              <th align="left">Modality</th>
+              <th align="left">Series Date</th>
+              <th align="left">Series Time</th>
+              <th align="left">Series Description</th>
+              <th align="left">Series Number</th>
+              <th align="left">Number Of Images</th>
+            </tr>
+            <tr>
+              <td>OP</td>
+              <td>2022-02-03</td>
+              <td>13:25:08</td>
+              <td>Section IR 30° ART</td>
+              <td>1 </td>
+              <td>1</td>
+            </tr>
+          </table>
+          <br clear="all" />
+          <table width="100%">
+            <tr>
+              <td width="15%"> </td>
+              <td>
+                <h3>
+                  <img id="Nav_4_2" src="images/arrow.gif" onclick="table_swap('Table_4_2','Nav_4_2')" alt="navigation arrow" />
+                             
+                            Images: (#: 1)
+                        </h3>
+              </td>
+            </tr>
+          </table>
+          <div id="Table_4_2" style="display: none">
+            <table border="1" style="display:block" width="85%" align="right">
+              <tr bgcolor="#FF8040">
+                <th align="left">Instance Number</th>
+                <th align="left">Image Type</th>
+                <th align="left">Referenced SOP Class UID in File</th>
+                <th align="left">Referenced Transfer Syntax UID In File</th>
+                <th align="left">Referenced File ID</th>
+              </tr>
+              <tr>
+                <td>1 </td>
+                <td>ORIGINAL\PRIMARY\\RED </td>
+                <td>1.2.840.10008.5.1.4.1.1.77.1.5.1</td>
+                <td>1.2.840.10008.1.2.1</td>
+                <td>
+                  <a href="../dicom/mc86/85590/546973/9320718/00000005">dicom/mc86/85590/546973/9320718/00000005</a>
+                </td>
+              </tr>
+            </table>
+            <br clear="all" />
+          </div>
+        </div>
+        <table width="100%">
+          <tr>
+            <td width="10%"> </td>
+            <td>
+              <h3>
+                <img id="Nav_3_3" src="images/arrow.gif" onclick="table_swap('Table_3_3','Nav_3_3')" alt="navigation arrow" />
+                           
+                          Series: (Nr: 1 )
+                        </h3>
+            </td>
+          </tr>
+        </table>
+        <div id="Table_3_3" style="display: none">
+          <table border="1" style="display:block" width="90%" align="right">
+            <tr bgcolor="#C0C0C0">
+              <th align="left">Modality</th>
+              <th align="left">Series Date</th>
+              <th align="left">Series Time</th>
+              <th align="left">Series Description</th>
+              <th align="left">Series Number</th>
+              <th align="left">Number Of Images</th>
+            </tr>
+            <tr>
+              <td>OP</td>
+              <td>2022-02-03</td>
+              <td>13:25:08</td>
+              <td>Section IR 30° ART</td>
+              <td>1 </td>
+              <td>1</td>
+            </tr>
+          </table>
+          <br clear="all" />
+          <table width="100%">
+            <tr>
+              <td width="15%"> </td>
+              <td>
+                <h3>
+                  <img id="Nav_4_3" src="images/arrow.gif" onclick="table_swap('Table_4_3','Nav_4_3')" alt="navigation arrow" />
+                             
+                            Images: (#: 1)
+                        </h3>
+              </td>
+            </tr>
+          </table>
+          <div id="Table_4_3" style="display: none">
+            <table border="1" style="display:block" width="85%" align="right">
+              <tr bgcolor="#FF8040">
+                <th align="left">Instance Number</th>
+                <th align="left">Image Type</th>
+                <th align="left">Referenced SOP Class UID in File</th>
+                <th align="left">Referenced Transfer Syntax UID In File</th>
+                <th align="left">Referenced File ID</th>
+              </tr>
+              <tr>
+                <td>1 </td>
+                <td>ORIGINAL\PRIMARY\\RED </td>
+                <td>1.2.840.10008.5.1.4.1.1.77.1.5.1</td>
+                <td>1.2.840.10008.1.2.1</td>
+                <td>
+                  <a href="../dicom/mc86/85590/546973/9320721/00000001">dicom/mc86/85590/546973/9320721/00000001</a>
+                </td>
+              </tr>
+            </table>
+            <br clear="all" />
+          </div>
+        </div>
+        <table width="100%">
+          <tr>
+            <td width="10%"> </td>
+            <td>
+              <h3>
+                <img id="Nav_3_4" src="images/arrow.gif" onclick="table_swap('Table_3_4','Nav_3_4')" alt="navigation arrow" />
+                           
+                          Series: (Nr: 1 )
+                        </h3>
+            </td>
+          </tr>
+        </table>
+        <div id="Table_3_4" style="display: none">
+          <table border="1" style="display:block" width="90%" align="right">
+            <tr bgcolor="#C0C0C0">
+              <th align="left">Modality</th>
+              <th align="left">Series Date</th>
+              <th align="left">Series Time</th>
+              <th align="left">Series Description</th>
+              <th align="left">Series Number</th>
+              <th align="left">Number Of Images</th>
+            </tr>
+            <tr>
+              <td>OP</td>
+              <td>2022-02-03</td>
+              <td>13:25:08</td>
+              <td>Section IR 30° ART</td>
+              <td>1 </td>
+              <td>1</td>
+            </tr>
+          </table>
+          <br clear="all" />
+          <table width="100%">
+            <tr>
+              <td width="15%"> </td>
+              <td>
+                <h3>
+                  <img id="Nav_4_4" src="images/arrow.gif" onclick="table_swap('Table_4_4','Nav_4_4')" alt="navigation arrow" />
+                             
+                            Images: (#: 1)
+                        </h3>
+              </td>
+            </tr>
+          </table>
+          <div id="Table_4_4" style="display: none">
+            <table border="1" style="display:block" width="85%" align="right">
+              <tr bgcolor="#FF8040">
+                <th align="left">Instance Number</th>
+                <th align="left">Image Type</th>
+                <th align="left">Referenced SOP Class UID in File</th>
+                <th align="left">Referenced Transfer Syntax UID In File</th>
+                <th align="left">Referenced File ID</th>
+              </tr>
+              <tr>
+                <td>1 </td>
+                <td>ORIGINAL\PRIMARY\\RED </td>
+                <td>1.2.840.10008.5.1.4.1.1.77.1.5.1</td>
+                <td>1.2.840.10008.1.2.1</td>
+                <td>
+                  <a href="../dicom/mc86/85590/546973/9320722/00000000">dicom/mc86/85590/546973/9320722/00000000</a>
+                </td>
+              </tr>
+            </table>
+            <br clear="all" />
+          </div>
+        </div>
+        <table width="100%">
+          <tr>
+            <td width="10%"> </td>
+            <td>
+              <h3>
+                <img id="Nav_3_5" src="images/arrow.gif" onclick="table_swap('Table_3_5','Nav_3_5')" alt="navigation arrow" />
+                           
+                          Series: (Nr: 2 )
+                        </h3>
+            </td>
+          </tr>
+        </table>
+        <div id="Table_3_5" style="display: none">
+          <table border="1" style="display:block" width="90%" align="right">
+            <tr bgcolor="#C0C0C0">
+              <th align="left">Modality</th>
+              <th align="left">Series Date</th>
+              <th align="left">Series Time</th>
+              <th align="left">Series Description</th>
+              <th align="left">Series Number</th>
+              <th align="left">Number Of Images</th>
+            </tr>
+            <tr>
+              <td>OPT </td>
+              <td>2022-02-03</td>
+              <td>13:25:08</td>
+              <td>Section IR 30° ART</td>
+              <td>2 </td>
+              <td>1</td>
+            </tr>
+          </table>
+          <br clear="all" />
+          <table width="100%">
+            <tr>
+              <td width="15%"> </td>
+              <td>
+                <h3>
+                  <img id="Nav_4_5" src="images/arrow.gif" onclick="table_swap('Table_4_5','Nav_4_5')" alt="navigation arrow" />
+                             
+                            Images: (#: 1)
+                        </h3>
+              </td>
+            </tr>
+          </table>
+          <div id="Table_4_5" style="display: none">
+            <table border="1" style="display:block" width="85%" align="right">
+              <tr bgcolor="#FF8040">
+                <th align="left">Instance Number</th>
+                <th align="left">Image Type</th>
+                <th align="left">Referenced SOP Class UID in File</th>
+                <th align="left">Referenced Transfer Syntax UID In File</th>
+                <th align="left">Referenced File ID</th>
+              </tr>
+              <tr>
+                <td>1 </td>
+                <td>ORIGINAL\PRIMARY</td>
+                <td>1.2.840.10008.5.1.4.1.1.77.1.5.4</td>
+                <td>1.2.840.10008.1.2.1</td>
+                <td>
+                  <a href="../dicom/mc86/85590/546973/9320715/00000007">dicom/mc86/85590/546973/9320715/00000007</a>
+                </td>
+              </tr>
+            </table>
+            <br clear="all" />
+          </div>
+        </div>
+        <table width="100%">
+          <tr>
+            <td width="10%"> </td>
+            <td>
+              <h3>
+                <img id="Nav_3_6" src="images/arrow.gif" onclick="table_swap('Table_3_6','Nav_3_6')" alt="navigation arrow" />
+                           
+                          Series: (Nr: 2 )
+                        </h3>
+            </td>
+          </tr>
+        </table>
+        <div id="Table_3_6" style="display: none">
+          <table border="1" style="display:block" width="90%" align="right">
+            <tr bgcolor="#C0C0C0">
+              <th align="left">Modality</th>
+              <th align="left">Series Date</th>
+              <th align="left">Series Time</th>
+              <th align="left">Series Description</th>
+              <th align="left">Series Number</th>
+              <th align="left">Number Of Images</th>
+            </tr>
+            <tr>
+              <td>OPT </td>
+              <td>2022-02-03</td>
+              <td>13:25:08</td>
+              <td>Section IR 30° ART</td>
+              <td>2 </td>
+              <td>1</td>
+            </tr>
+          </table>
+          <br clear="all" />
+          <table width="100%">
+            <tr>
+              <td width="15%"> </td>
+              <td>
+                <h3>
+                  <img id="Nav_4_6" src="images/arrow.gif" onclick="table_swap('Table_4_6','Nav_4_6')" alt="navigation arrow" />
+                             
+                            Images: (#: 1)
+                        </h3>
+              </td>
+            </tr>
+          </table>
+          <div id="Table_4_6" style="display: none">
+            <table border="1" style="display:block" width="85%" align="right">
+              <tr bgcolor="#FF8040">
+                <th align="left">Instance Number</th>
+                <th align="left">Image Type</th>
+                <th align="left">Referenced SOP Class UID in File</th>
+                <th align="left">Referenced Transfer Syntax UID In File</th>
+                <th align="left">Referenced File ID</th>
+              </tr>
+              <tr>
+                <td>1 </td>
+                <td>ORIGINAL\PRIMARY</td>
+                <td>1.2.840.10008.5.1.4.1.1.77.1.5.4</td>
+                <td>1.2.840.10008.1.2.1</td>
+                <td>
+                  <a href="../dicom/mc86/85590/546973/9320719/00000002">dicom/mc86/85590/546973/9320719/00000002</a>
+                </td>
+              </tr>
+            </table>
+            <br clear="all" />
+          </div>
+        </div>
+        <table width="100%">
+          <tr>
+            <td width="10%"> </td>
+            <td>
+              <h3>
+                <img id="Nav_3_7" src="images/arrow.gif" onclick="table_swap('Table_3_7','Nav_3_7')" alt="navigation arrow" />
+                           
+                          Series: (Nr: 2 )
+                        </h3>
+            </td>
+          </tr>
+        </table>
+        <div id="Table_3_7" style="display: none">
+          <table border="1" style="display:block" width="90%" align="right">
+            <tr bgcolor="#C0C0C0">
+              <th align="left">Modality</th>
+              <th align="left">Series Date</th>
+              <th align="left">Series Time</th>
+              <th align="left">Series Description</th>
+              <th align="left">Series Number</th>
+              <th align="left">Number Of Images</th>
+            </tr>
+            <tr>
+              <td>OPT </td>
+              <td>2022-02-03</td>
+              <td>13:25:08</td>
+              <td>Section IR 30° ART</td>
+              <td>2 </td>
+              <td>1</td>
+            </tr>
+          </table>
+          <br clear="all" />
+          <table width="100%">
+            <tr>
+              <td width="15%"> </td>
+              <td>
+                <h3>
+                  <img id="Nav_4_7" src="images/arrow.gif" onclick="table_swap('Table_4_7','Nav_4_7')" alt="navigation arrow" />
+                             
+                            Images: (#: 1)
+                        </h3>
+              </td>
+            </tr>
+          </table>
+          <div id="Table_4_7" style="display: none">
+            <table border="1" style="display:block" width="85%" align="right">
+              <tr bgcolor="#FF8040">
+                <th align="left">Instance Number</th>
+                <th align="left">Image Type</th>
+                <th align="left">Referenced SOP Class UID in File</th>
+                <th align="left">Referenced Transfer Syntax UID In File</th>
+                <th align="left">Referenced File ID</th>
+              </tr>
+              <tr>
+                <td>1 </td>
+                <td>ORIGINAL\PRIMARY</td>
+                <td>1.2.840.10008.5.1.4.1.1.77.1.5.4</td>
+                <td>1.2.840.10008.1.2.1</td>
+                <td>
+                  <a href="../dicom/mc86/85590/546973/9320716/00000006">dicom/mc86/85590/546973/9320716/00000006</a>
+                </td>
+              </tr>
+            </table>
+            <br clear="all" />
+          </div>
+        </div>
+        <table width="100%">
+          <tr>
+            <td width="10%"> </td>
+            <td>
+              <h3>
+                <img id="Nav_3_8" src="images/arrow.gif" onclick="table_swap('Table_3_8','Nav_3_8')" alt="navigation arrow" />
+                           
+                          Series: (Nr: 2 )
+                        </h3>
+            </td>
+          </tr>
+        </table>
+        <div id="Table_3_8" style="display: none">
+          <table border="1" style="display:block" width="90%" align="right">
+            <tr bgcolor="#C0C0C0">
+              <th align="left">Modality</th>
+              <th align="left">Series Date</th>
+              <th align="left">Series Time</th>
+              <th align="left">Series Description</th>
+              <th align="left">Series Number</th>
+              <th align="left">Number Of Images</th>
+            </tr>
+            <tr>
+              <td>OPT </td>
+              <td>2022-02-03</td>
+              <td>13:25:08</td>
+              <td>Section IR 30° ART</td>
+              <td>2 </td>
+              <td>1</td>
+            </tr>
+          </table>
+          <br clear="all" />
+          <table width="100%">
+            <tr>
+              <td width="15%"> </td>
+              <td>
+                <h3>
+                  <img id="Nav_4_8" src="images/arrow.gif" onclick="table_swap('Table_4_8','Nav_4_8')" alt="navigation arrow" />
+                             
+                            Images: (#: 1)
+                        </h3>
+              </td>
+            </tr>
+          </table>
+          <div id="Table_4_8" style="display: none">
+            <table border="1" style="display:block" width="85%" align="right">
+              <tr bgcolor="#FF8040">
+                <th align="left">Instance Number</th>
+                <th align="left">Image Type</th>
+                <th align="left">Referenced SOP Class UID in File</th>
+                <th align="left">Referenced Transfer Syntax UID In File</th>
+                <th align="left">Referenced File ID</th>
+              </tr>
+              <tr>
+                <td>1 </td>
+                <td>ORIGINAL\PRIMARY</td>
+                <td>1.2.840.10008.5.1.4.1.1.77.1.5.4</td>
+                <td>1.2.840.10008.1.2.1</td>
+                <td>
+                  <a href="../dicom/mc86/85590/546973/9320720/00000003">dicom/mc86/85590/546973/9320720/00000003</a>
+                </td>
+              </tr>
+            </table>
+            <br clear="all" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <p>
+      <a href="http://validator.w3.org">
+        <img src="images/valxhtml.png" alt="Valid XHTML 1.0 Transitional" height="31" width="88" />
+      </a>
+    </p>
+  </body>
+</html>

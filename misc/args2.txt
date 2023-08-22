@@ -1,0 +1,3 @@
+full resnet18 256 stack 128 32 _example
+cv resnet18 256 stack 128 32 _example
+full resnet18 256 stack 128 32 _example

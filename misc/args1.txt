@@ -1,0 +1,9 @@
+full resnet18 256 fundus 128 42 _example
+full resnet18 256 horizontal 128 42 _example
+full resnet18 256 vertical 128 42 _example
+cv resnet18 256 fundus 128 42 _example
+cv resnet18 256 horizontal 128 42 _example
+cv resnet18 256 vertical 128 42 _example
+none resnet18 256 fundus 128 42 _example
+none resnet18 256 horizontal 128 42 _example
+none resnet18 256 vertical 128 42 _example
